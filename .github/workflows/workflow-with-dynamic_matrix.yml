@@ -1,4 +1,4 @@
-name: workflow-with-dynamic_matrix
+ository":name: workflow-with-dynamic_matrix
 on:
   workflow_dispatch:
 
@@ -11,7 +11,7 @@ jobs:
       - name: build matrix
         id: json
         run: |
-          repository='{["repo1","repo2","repo3","repo4"] }'
+          repository='{"repository": ["repo1","repo2","repo3","repo4"] }'
           echo "repository=$repository" >> "$GITHUB_OUTPUT"
 
   run-matrix:
