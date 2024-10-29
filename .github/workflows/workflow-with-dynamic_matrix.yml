@@ -1,4 +1,4 @@
-ository":name: workflow-with-dynamic_matrix
+name: workflow-with-dynamic_matrix
 on:
   workflow_dispatch:
 
