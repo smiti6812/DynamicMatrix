@@ -4,19 +4,19 @@ on:
 
 jobs:
   prepare:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     outputs:
       repository: ${{ steps.json.outputs.repository }}
     steps:
       - name: build matrix
-        id: json
+        id: json        
         run: |
           repository='{"repository": ["repo1","repo2","repo3","repo4"] }'
-          echo "repository=$repository" >> "$GITHUB_OUTPUT"
+          echo "repository=$repository" >> "$ENV:GITHUB_OUTPUT"
 
   run-matrix:
     needs: prepare
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     strategy:
       fail-fast: false
       matrix: ${{ fromJson(needs.prepare.outputs.repository) }}
