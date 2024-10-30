@@ -11,7 +11,7 @@ jobs:
       - name: build matrix
         id: json        
         run: |       
-          $repository='{"repository": [".\\ReportFolder\\repo1.sln",".\\ReportFolder\\repo2.sln",".\\ReportFolder\\repo3.sln",".\\ReportFolder\\repo4.sln"] }'
+          $repository='{"repository": [".\\MDSng\\MDSng_GUI\\MDSng_GUI_CrashDataManagement\\MDSng_GUI_CrashDataManagement.sln",".\\MDSng\\MDSng_GUI\\MDSng_GUI_GUI\\MDSng_GUI_GUI.sln",".\\ReportFolder\\repo3.sln",".\\ReportFolder\\repo4.sln"] }'
           echo "repository=$repository" >> "$ENV:GITHUB_OUTPUT"
 
   run-matrix:
