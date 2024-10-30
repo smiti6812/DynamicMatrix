@@ -11,7 +11,7 @@ jobs:
       - name: build matrix
         id: json        
         run: |
-          $repos = "`""repo1`"",`""repo2`"",`""repo3`"",`""repo4`"""
+          $repos = """repo1"",""repo2"",""repo3"",""repo4"""
           $repository='{"repository": [$repos] }'
           echo "repository=$repository" >> "$ENV:GITHUB_OUTPUT"
 
