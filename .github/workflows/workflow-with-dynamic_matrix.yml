@@ -18,7 +18,7 @@ jobs:
     runs-on: windows-latest
     steps:
      - name: Summary
-     - run: |
+       run: |
         echo "[Here](https://index.hu) Index Page" >> $GITHUB_STEP_SUMMARY
   run-matrix:
     needs: prepare
