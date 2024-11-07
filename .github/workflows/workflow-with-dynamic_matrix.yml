@@ -22,4 +22,6 @@ jobs:
       max-parallel: 1
       matrix: ${{ fromJson(needs.prepare.outputs.repository) }}
     steps:
-      - run: echo "${{ matrix.repository }}"
+      - run: |
+          echo "${{ matrix.repository }}"
+          echo "### Hello world! :rocket:" >> $GITHUB_STEP_SUMMARY
