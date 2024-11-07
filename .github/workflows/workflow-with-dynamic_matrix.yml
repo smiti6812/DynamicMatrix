@@ -14,11 +14,12 @@ jobs:
           $repository='{"repository": [".\\MDSng\\MDSng_GUI\\MDSng_GUI_CrashDataManagement\\MDSng_GUI_CrashDataManagement.sln",".\\MDSng\\MDSng_GUI\\MDSng_GUI_GUI\\MDSng_GUI_GUI.sln",".\\ReportFolder\\repo3.sln",".\\ReportFolder\\repo4.sln"] }'
           echo "repository=$repository" >> "$ENV:GITHUB_OUTPUT"
   show-summary:
+    needs: prepare
     runs-on: windows-latest
     steps:
-    - name: Summary
-    - run: |
-       echo "[Here](https://index.hu) Index Page" >> $GITHUB_STEP_SUMMARY
+     - name: Summary
+     - run: |
+        echo "[Here](https://index.hu) Index Page" >> $GITHUB_STEP_SUMMARY
   run-matrix:
     needs: prepare
     runs-on: windows-latest
