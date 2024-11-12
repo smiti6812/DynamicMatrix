@@ -19,7 +19,7 @@ jobs:
     steps:
      - name: Summary
        run: |
-        echo "[Here](C:\\Users\\SCM6BP) Index Page" >> $ENV:GITHUB_STEP_SUMMARY
+        echo "[Here](file://Users//SCM6BP) Index Page" >> $ENV:GITHUB_STEP_SUMMARY
   run-matrix:
     needs: prepare
     runs-on: windows-latest
