@@ -17,9 +17,14 @@ jobs:
     needs: prepare
     runs-on: windows-latest
     steps:
+     - name: Prepare input
+       id: prepareInput
+       run: |
+         $input = "file://bosch.com/dfsrb/DfsDE/DIV/CS/DE_CS$/Prj/PS/Support/Tools/MDSng_64Bit/ContinuousIntegration/GitHub_Builds/208-create-ranorex-cicd-pipeline/9_1/TestResults/"
+         echo "myInput=$input" >> $ENV:ENV:GITHUB_OUTPUT
      - name: Summary
        run: |
-        echo "[Here](file://Users//SCM6BP) Index Page" >> $ENV:GITHUB_STEP_SUMMARY
+        echo "[Here](${{ steps.prepareInput.outputs.myInput }}) File Path" >> $ENV:GITHUB_STEP_SUMMARY
   run-matrix:
     needs: prepare
     runs-on: windows-latest
