@@ -24,6 +24,7 @@ jobs:
          echo "myInput=$input" >> $ENV:ENV:GITHUB_OUTPUT
      - name: Summary
        run: |
+        echo ${{ steps.prepareInput.outputs.myInput }}
         echo "[Here](${{ steps.prepareInput.outputs.myInput }}) File Path" >> $ENV:GITHUB_STEP_SUMMARY
   run-matrix:
     needs: prepare
