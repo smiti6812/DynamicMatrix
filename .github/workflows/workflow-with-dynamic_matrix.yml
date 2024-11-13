@@ -20,7 +20,7 @@ jobs:
      - name: Prepare input
        id: prepareInput
        run: |
-         $input = "file://bosch.com/dfsrb/DfsDE/DIV/CS/DE_CS$/Prj/PS/Support/Tools/MDSng_64Bit/ContinuousIntegration/GitHub_Builds/208-create-ranorex-cicd-pipeline/9_1/TestResults/"
+         $input = "//bosch.com/dfsrb/DfsDE/DIV/CS/DE_CS$/Prj/PS/Support/Tools/MDSng_64Bit/ContinuousIntegration/GitHub_Builds/208-create-ranorex-cicd-pipeline/9_1/TestResults/"
          
          echo "myInput=$input" >> $ENV:GITHUB_OUTPUT
      - name: Summary
